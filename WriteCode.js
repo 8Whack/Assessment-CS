@@ -10,7 +10,7 @@ function sumZero(array){
     return (result)
 }
 
-//console.log(sumZero([0, 21, 33, 9, 1, -9]))
+console.log(sumZero([0, 21, 33, 9, 1, -9]))
 
 //TC: O(n^2) since I'm running my inputs through two for loops and checking everything against everything else
 //SC: O(1) since the array length is already declared by whatever is passed in- the function itself doesn't take up any space.
@@ -19,7 +19,7 @@ function uniqueCharacters(str){
     return new Set(str).size === str.length;
 }
 
-//console.log(uniqueCharacters('Moonday'))
+console.log(uniqueCharacters('Moonday'))
 
 //TC: O(n) since no matter how big the string, it's only iterating over the string and adding to the set once- and then checking if the two sizes are the same.
 //SC: O(n<26) since the space being taken up is taken by the set's size; and it can only get to 26(the letters in the alphabet.)
@@ -32,7 +32,7 @@ function pangram(str){
     return new Set(str).size === 26
 }
 
-//console.log(pangram('Sphinx of Black Quartz, Judge my Vow!@#$%^&*123456789'))
+console.log(pangram('Sphinx of Black Quartz, Judge my Vow!@#$%^&*()123456789'))
 
 //TC: O(n) since all this does is change the string into only letters, then iterate over the string once and add to the new set; and then we check if the set size is 26(the size of the alphabet.)
 //SC: same as the previous function, O(n<26).
